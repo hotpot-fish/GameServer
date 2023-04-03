@@ -1,0 +1,166 @@
+syntax ="proto3";
+
+package Net;
+
+message LoginData
+{
+    string username = 1;
+    string passwd = 2;
+    enum Operation
+    {
+        Login = 0;
+        Register = 1;
+    }
+
+    Operation opt = 3;
+}
+
+message LoginResponse
+{
+    bool result = 1;
+    string msg = 2;
+    int32 userid = 3;
+    string username = 4;
+    enum Operation
+    {
+        Login = 0;
+        Register = 1;
+    }
+
+    Operation opt = 5;
+}
+
+message CharacterData
+{
+    enum MoveOpt
+    {
+        NONE = 0;
+        UP = 1;
+        DOWN = 2;
+        LEFT = 3;
+        RIGHT = 4;
+    }
+
+    MoveOpt move = 1;
+
+    enum AbilityOpt
+    {
+        None = 0;
+        Attack = 1;
+    }
+
+    AbilityOpt Skill = 2;
+
+    int32 userid = 3;
+}
+
+message UserMoney{
+    int32 userid = 1;
+    int32 money = 2;
+    enum Operation
+    {
+        Get = 0;
+        Add = 1;
+        Sub = 2;
+    }
+    Operation opt = 3;
+}
+
+message LoginOut
+{
+    int32 userid = 1;
+    string reason = 2;
+}
+
+message GameState
+{
+    int32 bGameStart = 1;
+}
+
+
+message HashString
+{
+    int32 frame = 1;
+    string hash = 2;
+}
+
+message ServerInfo
+{
+    string ip = 1;
+    int32 port = 2;
+    int32 server_free_level = 3;
+    int32 server_type = 4;
+
+    enum Operation
+    {
+        Register = 0;
+        RequstAssgin = 1;
+        Connect = 2;
+    }
+
+    Operation opt = 5;
+}
+
+enum PlayerOpt
+{
+    //键盘按键类型
+    Nothing = 0;
+    A_Down = 21;  //A键按下
+    A_Up = 1;   //A键抬起
+    D_Down = 2;
+    D_Up = 3;
+    J_Down = 4;
+    J_Up = 5;
+    K_Down = 6;
+    K_Up = 7;
+    L_Down = 8;
+    L_Up = 9;
+    Q_Down = 10;
+    Q_Up = 11;
+    E_Down = 12;
+    E_Up = 13;
+    Shift_Down = 14;
+    Shift_Up = 15;
+    Space_Down = 16;
+    Space_Up = 17;
+    //物品交互类型
+    
+
+    Move_item = 18;   //移动物品
+    Create_item = 19; //创造物品
+    Delete_item = 20; //销毁物品
+
+    User_Login = 22; //首次登录
+    User_Logout = 23; //登出
+}
+
+message PlayerOptData
+{
+    PlayerOpt opt = 1; //操作类型
+    int32 userid = 2; //操作者id
+    int32 roomid = 3;  //操作者所在房间id
+    int32 itemid = 4; //如果是对物品操作，物品的id
+}
+
+message PlayerMessage
+{
+    int32 roomid = 1;
+    int32 userid = 2;
+    string content = 3;
+}
+
+message Frame
+{
+    int32 roomid = 1;
+    int32 index = 2;
+    repeated PlayerOptData opts = 3;
+    repeated PlayerMessage msgs= 4;
+    enum Send
+    {
+        All = 0;
+        Single = 1;
+    }
+
+    Send sendcase = 5;
+    int32 userid = 6;
+}
