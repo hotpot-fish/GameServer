@@ -1,6 +1,6 @@
 # GameServer
 
-## 欢乐互娱游戏demo后端设计
+## 游戏demo后端设计
 
 ### 环境搭建
 * Protobuf : 3.19.1
