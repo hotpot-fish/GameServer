@@ -34,6 +34,7 @@ void CenterServer::RegisterServer(Server_Info *machine)
     }
     else if (type == SERVER_TYPE::GATE)
     {
+
         gateServerGroup.push_back(machine);
     }
     else if (type == SERVER_TYPE::DATABASE)

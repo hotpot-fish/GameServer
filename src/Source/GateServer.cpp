@@ -260,7 +260,7 @@ int main(int argc, char **argv)
 
     GateServer gateServer;
 
-    printf("Start Gate Center Server ing...\n");
+    printf("Start Gate Server ing...\n");
     gateServer.BootServer(port);
 
     return 0;

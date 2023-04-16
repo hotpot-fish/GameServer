@@ -1,0 +1,2 @@
+/usr/bin/ar cq lib/libProtoUtilLib.a  CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o
+/usr/bin/ranlib lib/libProtoUtilLib.a
