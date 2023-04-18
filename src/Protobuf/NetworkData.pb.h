@@ -309,12 +309,16 @@ enum PlayerOpt : int {
   Delete_item = 20,
   User_Login = 22,
   User_Logout = 23,
+  Fix_Facility = 24,
+  Move_Player = 25,
+  Join_Room = 26,
+  Exit_Room = 27,
   PlayerOpt_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
   PlayerOpt_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
 };
 bool PlayerOpt_IsValid(int value);
 constexpr PlayerOpt PlayerOpt_MIN = Nothing;
-constexpr PlayerOpt PlayerOpt_MAX = User_Logout;
+constexpr PlayerOpt PlayerOpt_MAX = Exit_Room;
 constexpr int PlayerOpt_ARRAYSIZE = PlayerOpt_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PlayerOpt_descriptor();

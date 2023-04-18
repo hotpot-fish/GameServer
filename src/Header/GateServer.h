@@ -10,10 +10,12 @@ private:
     std::map<std::string, int> user_fd_record;                      // client
     std::map<int, std::map<std::string, int>> room_user_fd_records; //
     std::map<std::string, int> user_room_record;                    // username roomid
+    std::map<int, std::set<int>> roomsize_roomid_record;
+    std::map<int, int> roomid_roomsize_record;
     std::map<int, std::string> userid_username_record;
     std::map<std::string, int> username_userid_record; // 记录username 和userid对应
     std::vector<std::string> logout_clients;           // 记录断开客户端
-    int cur_room_size = 0;
+    int cur_room_id = 1;
     int max_map_size = MAX_MAP_SIZE;
 
 private:

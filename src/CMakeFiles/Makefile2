@@ -100,9 +100,9 @@ clean: CMakeFiles/BaseObj.dir/clean
 # Target rules for target CMakeFiles/BattleServer.dir
 
 # All Build rule for target.
-CMakeFiles/BattleServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 CMakeFiles/BattleServer.dir/all: CMakeFiles/CommonUtilLib.dir/all
 CMakeFiles/BattleServer.dir/all: CMakeFiles/BaseObj.dir/all
+CMakeFiles/BattleServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 	$(MAKE) -f CMakeFiles/BattleServer.dir/build.make CMakeFiles/BattleServer.dir/depend
 	$(MAKE) -f CMakeFiles/BattleServer.dir/build.make CMakeFiles/BattleServer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=3,4 "Built target BattleServer"
@@ -139,9 +139,9 @@ clean: CMakeFiles/BattleServer.dir/clean
 # Target rules for target CMakeFiles/CenterServer.dir
 
 # All Build rule for target.
-CMakeFiles/CenterServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 CMakeFiles/CenterServer.dir/all: CMakeFiles/CommonUtilLib.dir/all
 CMakeFiles/CenterServer.dir/all: CMakeFiles/BaseObj.dir/all
+CMakeFiles/CenterServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 	$(MAKE) -f CMakeFiles/CenterServer.dir/build.make CMakeFiles/CenterServer.dir/depend
 	$(MAKE) -f CMakeFiles/CenterServer.dir/build.make CMakeFiles/CenterServer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=5,6 "Built target CenterServer"
@@ -215,9 +215,9 @@ clean: CMakeFiles/CommonUtilLib.dir/clean
 # Target rules for target CMakeFiles/DBServer.dir
 
 # All Build rule for target.
-CMakeFiles/DBServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 CMakeFiles/DBServer.dir/all: CMakeFiles/CommonUtilLib.dir/all
 CMakeFiles/DBServer.dir/all: CMakeFiles/BaseObj.dir/all
+CMakeFiles/DBServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 	$(MAKE) -f CMakeFiles/DBServer.dir/build.make CMakeFiles/DBServer.dir/depend
 	$(MAKE) -f CMakeFiles/DBServer.dir/build.make CMakeFiles/DBServer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=12,13 "Built target DBServer"
@@ -254,9 +254,9 @@ clean: CMakeFiles/DBServer.dir/clean
 # Target rules for target CMakeFiles/GateServer.dir
 
 # All Build rule for target.
-CMakeFiles/GateServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 CMakeFiles/GateServer.dir/all: CMakeFiles/CommonUtilLib.dir/all
 CMakeFiles/GateServer.dir/all: CMakeFiles/BaseObj.dir/all
+CMakeFiles/GateServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 	$(MAKE) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/depend
 	$(MAKE) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=14,15 "Built target GateServer"
@@ -293,9 +293,9 @@ clean: CMakeFiles/GateServer.dir/clean
 # Target rules for target CMakeFiles/LogicServer.dir
 
 # All Build rule for target.
-CMakeFiles/LogicServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 CMakeFiles/LogicServer.dir/all: CMakeFiles/CommonUtilLib.dir/all
 CMakeFiles/LogicServer.dir/all: CMakeFiles/BaseObj.dir/all
+CMakeFiles/LogicServer.dir/all: CMakeFiles/ProtoUtilLib.dir/all
 	$(MAKE) -f CMakeFiles/LogicServer.dir/build.make CMakeFiles/LogicServer.dir/depend
 	$(MAKE) -f CMakeFiles/LogicServer.dir/build.make CMakeFiles/LogicServer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=16,17 "Built target LogicServer"

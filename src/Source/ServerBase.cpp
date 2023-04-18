@@ -187,7 +187,7 @@ void ServerBase::HandleReceivedMsg(RingBuffer *buffer, int fd)
     delete begin;
 }
 
-bool ServerBase::SendMsg(BODYTYPE type, size_t totalSize, const uint8_t *data_array, int fd)
+int ServerBase::SendMsg(BODYTYPE type, size_t totalSize, const uint8_t *data_array, int fd)
 {
     if (connections.count(fd))
     {
@@ -205,20 +205,52 @@ bool ServerBase::SendMsg(BODYTYPE type, size_t totalSize, const uint8_t *data_ar
             resp[i] = data_array[i - HEAD_SIZE];
         }
         
-
-        if (send(fd, resp, tmpSize+ HEAD_SIZE, 0) < 0)
+        int sentSize = 0;
+        while (sentSize < tmpSize + HEAD_SIZE)
         {
-            std::cerr << "Could not send msg to client\n";
-            CloseClientSocket(fd);
-            return false;
+            int sendres = send(fd, resp + sentSize, tmpSize + HEAD_SIZE - sentSize, 0);
+            if (sendres < 0)
+            {
+                if (errno == EAGAIN || errno == EWOULDBLOCK)
+                {
+                    // 缓冲区已满，等待套接字变为可写
+                    fd_set fds;
+                    FD_ZERO(&fds);
+                    FD_SET(fd, &fds);
+                    int select_res = select(fd + 1, NULL, &fds, NULL, NULL);
+                    if (select_res < 0)
+                    {
+                        std::cerr << "Select error: " << strerror(errno) << std::endl;
+                        CloseClientSocket(fd);
+                        return 0;
+                    }
+                    else if (select_res == 0)
+                    {
+                        // 超时
+                        std::cerr << "Select timeout, send failed" << std::endl;
+                        CloseClientSocket(fd);
+                        return 0;
+                    }
+                }
+                else
+                {
+                    std::cerr << "Could not send msg to client: " << strerror(errno) << std::endl;
+                    CloseClientSocket(fd);
+                    return 0;
+                }
+            }
+            else
+            {
+                sentSize += sendres;
+            }
         }
 
-        return true;
+        return sentSize;
     }
     else
     {
         std::cerr << "client is not exist\n";
-        return false;
+        return 0;
     }
 }
 

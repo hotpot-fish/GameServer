@@ -43,6 +43,7 @@ void BattleServer::run()
                 }
                 iter->second.clear_opts();
                 iter->second.clear_index();
+                iter->second.clear_msgs();
                 room_frame_indexs[iter->first]++;
             }
             else
@@ -68,6 +69,7 @@ void BattleServer::run()
                     }
                 }
                 iter->second.clear_opts();
+                iter->second.clear_msgs();
             }
         }
         // 等待一段时间
@@ -93,6 +95,7 @@ void BattleServer::OnMsgBodyAnalysised(Header head, const uint8_t *body, uint32_
 
     Net::PlayerOptData playerOptData;
     Net::LoginResponse loginResponse;
+    Net::PlayerMessage playerMessage;
     Net::Frame frame;
 
     switch (type)
@@ -100,47 +103,38 @@ void BattleServer::OnMsgBodyAnalysised(Header head, const uint8_t *body, uint32_
     case BODYTYPE::PlayerOptData:
         /* code */
         playerOptData = ProtoUtil::ParseBodyToPlayerOptData(body, length, parseRet);
-
-        if (playerOptData.itemid() == -1)
+        if(playerOptData.opt() == Net::PlayerOpt::Nothing) std::cout<<"收到移除房间"<<std::endl;
+        if (playerOptData.itemid() == -1 && playerOptData.userid() == -1 && playerOptData.opt() == Net::PlayerOpt::Nothing)
         { // 移除房间
-            if (playerOptData.userid() == -1)
-            {
-                std::cout << "移除房间: " << playerOptData.roomid() << std::endl;
-                room_frames.erase(playerOptData.roomid());
-                room_all_frames.erase(playerOptData.roomid());
-                room_login_frames.erase(playerOptData.roomid());
-                room_frame_indexs.erase(playerOptData.roomid());
-                room_playernum.erase(playerOptData.roomid());
+            std::cout << "移除房间: " << playerOptData.roomid() << std::endl;
+            room_frames.erase(playerOptData.roomid());
+            room_all_frames.erase(playerOptData.roomid());
+            room_frame_indexs.erase(playerOptData.roomid());
 
-                room_state.erase(playerOptData.roomid());
-                if (!room_frames.count(playerOptData.roomid()))
-                {
-                    std::cout << "删了" << std::endl;
-                }
-            }
-            else
+            room_state.erase(playerOptData.roomid());
+            if (!room_frames.count(playerOptData.roomid()))
             {
-                if (playerOptData.opt() == Net::PlayerOpt::User_Logout)
-                {
-                    // 发送登出信息
-                    room_frames[playerOptData.roomid()].set_index(-1);
-                    room_frames[playerOptData.roomid()].add_opts()->CopyFrom(playerOptData);
-                }
+                std::cout << "删了" << std::endl;
             }
         }
         else
-        {
+        {       
             if (!room_frames.count(playerOptData.roomid()))
             {
                 room_frames[playerOptData.roomid()] = Net::Frame();
                 room_all_frames[playerOptData.roomid()] = std::vector<Net::Frame>();
-                room_login_frames[playerOptData.roomid()] = std::vector<Net::Frame>();
                 room_frame_indexs[playerOptData.roomid()] = 0;
-                room_playernum[playerOptData.roomid()] = 0;
                 room_state[playerOptData.roomid()] = false;
+                std::cout<<"???????"<<std::endl;
             }
-
-            if (playerOptData.opt() == Net::PlayerOpt::User_Login)
+            
+            if (playerOptData.opt() == Net::PlayerOpt::Exit_Room)
+            {
+                // 发送登出信息
+                std::cout<<"Exitroom"<<std::endl;
+                room_frames[playerOptData.roomid()].set_index(-1);
+            }
+            if (playerOptData.opt() == Net::PlayerOpt::Join_Room)
             {
                 for (int i = 0; i < room_all_frames[playerOptData.roomid()].size(); i++)
                 {
@@ -164,7 +158,6 @@ void BattleServer::OnMsgBodyAnalysised(Header head, const uint8_t *body, uint32_
                     }
                 }
                 room_frames[playerOptData.roomid()].set_index(-1);
-                room_playernum[playerOptData.roomid()] = room_playernum[playerOptData.roomid()] + 1;
             }
             room_frames[playerOptData.roomid()].add_opts()->CopyFrom(playerOptData);
         }
@@ -173,8 +166,12 @@ void BattleServer::OnMsgBodyAnalysised(Header head, const uint8_t *body, uint32_
         break;
     case BODYTYPE::Frame:
         frame = ProtoUtil::ParseBodyToFrame(body, length, parseRet);
-        room_playernum[frame.roomid()] = MAX_MAP_SIZE;
+        std::cout<<"receive, roomid:"<<frame.roomid()<<std::endl;
         room_state[frame.roomid()] = true;
+        break;
+    case BODYTYPE::PlayerMessage:
+        playerMessage = ProtoUtil::ParseBodyToPlayerMessage(body, length, parseRet);
+        room_frames[playerMessage.roomid()].add_msgs()->CopyFrom(playerMessage);
         break;
 
     default:

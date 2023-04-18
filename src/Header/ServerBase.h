@@ -59,7 +59,7 @@ protected:
 protected:
     bool ConnectToOtherServer(std::string ip, int port, int &fd);
 
-    bool SendMsg(BODYTYPE type, size_t totalSize, const uint8_t *data_array, int fd);
+    int SendMsg(BODYTYPE type, size_t totalSize, const uint8_t *data_array, int fd);
 
     // if hasSelf = false, multicast will not send to self
     void MulticastMsg(size_t totalSize, uint8_t *data_array, int self_fd, bool hasSelf = true);

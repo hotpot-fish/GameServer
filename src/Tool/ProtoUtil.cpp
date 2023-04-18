@@ -35,6 +35,7 @@ enum BODYTYPE
 
 //新加
     PlayerOptData,
+    PlayerMessage,
     /* server之间通信协议 */
     ServerInfo = 100
 
@@ -153,6 +154,7 @@ public:
     GENERTATE_METHOD_BY_BODYTYPE(Net::HashString, HashString);
     GENERTATE_METHOD_BY_BODYTYPE(Net::UserMoney, UserMoney);
     GENERTATE_METHOD_BY_BODYTYPE(Net::PlayerOptData, PlayerOptData);
+    GENERTATE_METHOD_BY_BODYTYPE(Net::PlayerMessage, PlayerMessage);
     GENERTATE_METHOD_BY_BODYTYPE(Net::ServerInfo, ServerInfo);
     // 序列化body
 

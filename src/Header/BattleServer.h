@@ -42,7 +42,6 @@ public:
     std::map<int, int> room_frame_indexs;                     // 房间当前帧和索引
     std::map<int, int> room_playernum;                        // 房间人数
     std::map<int, bool> room_state;                           // 房间状态
-    std::map<int, std::vector<Net::Frame>> room_login_frames; // 追帧
     int frameindex = 1;
 
     explicit BattleServer();

@@ -132,6 +132,10 @@ enum PlayerOpt
 
     User_Login = 22; //首次登录
     User_Logout = 23; //登出
+    Fix_Facility = 24;
+    Move_Player = 25;
+    Join_Room = 26;
+    Exit_Room = 27;
 }
 
 message PlayerOptData

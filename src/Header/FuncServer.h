@@ -10,7 +10,7 @@ private:
     // center server config
     std::string center_ip = "127.0.0.1";
     /* 中心服务器端口 */
-    int center_port = 8088;
+    int center_port = 8098;
 
     Timer center_connect_timer;
 public:

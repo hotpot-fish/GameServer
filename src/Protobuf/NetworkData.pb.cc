@@ -354,7 +354,7 @@ const char descriptor_table_protodef_NetworkData_2eproto[] PROTOBUF_SECTION_VARI
   " \n\004opts\030\003 \003(\0132\022.Net.PlayerOptData\022 \n\004msg"
   "s\030\004 \003(\0132\022.Net.PlayerMessage\022!\n\010sendcase\030"
   "\005 \001(\0162\017.Net.Frame.Send\022\016\n\006userid\030\006 \001(\005\"\033"
-  "\n\004Send\022\007\n\003All\020\000\022\n\n\006Single\020\001*\300\002\n\tPlayerOp"
+  "\n\004Send\022\007\n\003All\020\000\022\n\n\006Single\020\001*\201\003\n\tPlayerOp"
   "t\022\013\n\007Nothing\020\000\022\n\n\006A_Down\020\025\022\010\n\004A_Up\020\001\022\n\n\006"
   "D_Down\020\002\022\010\n\004D_Up\020\003\022\n\n\006J_Down\020\004\022\010\n\004J_Up\020\005"
   "\022\n\n\006K_Down\020\006\022\010\n\004K_Up\020\007\022\n\n\006L_Down\020\010\022\010\n\004L_"
@@ -362,11 +362,13 @@ const char descriptor_table_protodef_NetworkData_2eproto[] PROTOBUF_SECTION_VARI
   "\n\004E_Up\020\r\022\016\n\nShift_Down\020\016\022\014\n\010Shift_Up\020\017\022\016"
   "\n\nSpace_Down\020\020\022\014\n\010Space_Up\020\021\022\r\n\tMove_ite"
   "m\020\022\022\017\n\013Create_item\020\023\022\017\n\013Delete_item\020\024\022\016\n"
-  "\nUser_Login\020\026\022\017\n\013User_Logout\020\027b\006proto3"
+  "\nUser_Login\020\026\022\017\n\013User_Logout\020\027\022\020\n\014Fix_Fa"
+  "cility\020\030\022\017\n\013Move_Player\020\031\022\r\n\tJoin_Room\020\032"
+  "\022\r\n\tExit_Room\020\033b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_NetworkData_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_NetworkData_2eproto = {
-  false, false, 1638, descriptor_table_protodef_NetworkData_2eproto, "NetworkData.proto", 
+  false, false, 1703, descriptor_table_protodef_NetworkData_2eproto, "NetworkData.proto", 
   &descriptor_table_NetworkData_2eproto_once, nullptr, 0, 11,
   schemas, file_default_instances, TableStruct_NetworkData_2eproto::offsets,
   file_level_metadata_NetworkData_2eproto, file_level_enum_descriptors_NetworkData_2eproto, file_level_service_descriptors_NetworkData_2eproto,
@@ -565,6 +567,10 @@ bool PlayerOpt_IsValid(int value) {
     case 21:
     case 22:
     case 23:
+    case 24:
+    case 25:
+    case 26:
+    case 27:
       return true;
     default:
       return false;
