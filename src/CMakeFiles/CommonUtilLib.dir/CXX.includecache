@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/dev/homework/ZP_Server/src/Header/profile.h
+/home/dev/homework/only_test/src/Header/profile.h
 
-/home/dev/homework/ZP_Server/src/Tool/EpollMgr.cpp
+/home/dev/homework/only_test/src/Tool/EpollMgr.cpp
 iostream
 -
 sys/epoll.h
@@ -18,9 +18,9 @@ unistd.h
 functional
 -
 ../Header/profile.h
-/home/dev/homework/ZP_Server/src/Header/profile.h
+/home/dev/homework/only_test/src/Header/profile.h
 
-/home/dev/homework/ZP_Server/src/Tool/Event.cpp
+/home/dev/homework/only_test/src/Tool/Event.cpp
 iostream
 -
 vector
@@ -28,7 +28,7 @@ vector
 functional
 -
 
-/home/dev/homework/ZP_Server/src/Tool/RingBuffer.cpp
+/home/dev/homework/only_test/src/Tool/RingBuffer.cpp
 stdint.h
 -
 string.h
@@ -38,15 +38,15 @@ iostream
 memory
 -
 RingBuffer.h
-/home/dev/homework/ZP_Server/src/Tool/RingBuffer.h
+/home/dev/homework/only_test/src/Tool/RingBuffer.h
 ../Header/profile.h
-/home/dev/homework/ZP_Server/src/Header/profile.h
+/home/dev/homework/only_test/src/Header/profile.h
 
-/home/dev/homework/ZP_Server/src/Tool/RingBuffer.h
+/home/dev/homework/only_test/src/Tool/RingBuffer.h
 stdint.h
 -
 
-/home/dev/homework/ZP_Server/src/Tool/Timer.cpp
+/home/dev/homework/only_test/src/Tool/Timer.cpp
 chrono
 -
 thread

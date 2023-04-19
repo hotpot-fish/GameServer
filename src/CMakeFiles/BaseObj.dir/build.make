@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dev/homework/ZP_Server
+CMAKE_SOURCE_DIR = /home/dev/homework/only_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dev/homework/ZP_Server/src
+CMAKE_BINARY_DIR = /home/dev/homework/only_test/src
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BaseObj.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/BaseObj.dir/flags.make
 
 CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.o: CMakeFiles/BaseObj.dir/flags.make
 CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.o: Source/ServerBase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.o -c /home/dev/homework/ZP_Server/src/Source/ServerBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dev/homework/only_test/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.o -c /home/dev/homework/only_test/src/Source/ServerBase.cpp
 
 CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dev/homework/ZP_Server/src/Source/ServerBase.cpp > CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dev/homework/only_test/src/Source/ServerBase.cpp > CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.i
 
 CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dev/homework/ZP_Server/src/Source/ServerBase.cpp -o CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dev/homework/only_test/src/Source/ServerBase.cpp -o CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.s
 
 CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/BaseObj.dir/Source/ServerBase.cpp.o.provides.build: CMakeFiles/BaseOb
 
 CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.o: CMakeFiles/BaseObj.dir/flags.make
 CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.o: Source/FuncServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.o -c /home/dev/homework/ZP_Server/src/Source/FuncServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dev/homework/only_test/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.o -c /home/dev/homework/only_test/src/Source/FuncServer.cpp
 
 CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dev/homework/ZP_Server/src/Source/FuncServer.cpp > CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dev/homework/only_test/src/Source/FuncServer.cpp > CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.i
 
 CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dev/homework/ZP_Server/src/Source/FuncServer.cpp -o CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dev/homework/only_test/src/Source/FuncServer.cpp -o CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.s
 
 CMakeFiles/BaseObj.dir/Source/FuncServer.cpp.o.requires:
 
@@ -126,6 +126,6 @@ CMakeFiles/BaseObj.dir/clean:
 .PHONY : CMakeFiles/BaseObj.dir/clean
 
 CMakeFiles/BaseObj.dir/depend:
-	cd /home/dev/homework/ZP_Server/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dev/homework/ZP_Server /home/dev/homework/ZP_Server /home/dev/homework/ZP_Server/src /home/dev/homework/ZP_Server/src /home/dev/homework/ZP_Server/src/CMakeFiles/BaseObj.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dev/homework/only_test/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dev/homework/only_test /home/dev/homework/only_test /home/dev/homework/only_test/src /home/dev/homework/only_test/src /home/dev/homework/only_test/src/CMakeFiles/BaseObj.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/BaseObj.dir/depend
 

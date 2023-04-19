@@ -136,6 +136,9 @@ enum PlayerOpt
     Move_Player = 25;
     Join_Room = 26;
     Exit_Room = 27;
+    Mark_User = 28;
+    UnMark_USer = 29;
+    Throw_item = 30;
 }
 
 message PlayerOptData

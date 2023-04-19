@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dev/homework/ZP_Server
+CMAKE_SOURCE_DIR = /home/dev/homework/only_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dev/homework/ZP_Server/src
+CMAKE_BINARY_DIR = /home/dev/homework/only_test/src
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ProtoUtilLib.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ProtoUtilLib.dir/flags.make
 
 CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o: CMakeFiles/ProtoUtilLib.dir/flags.make
 CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o: Protobuf/NetworkData.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o -c /home/dev/homework/ZP_Server/src/Protobuf/NetworkData.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dev/homework/only_test/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o -c /home/dev/homework/only_test/src/Protobuf/NetworkData.pb.cc
 
 CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dev/homework/ZP_Server/src/Protobuf/NetworkData.pb.cc > CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dev/homework/only_test/src/Protobuf/NetworkData.pb.cc > CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.i
 
 CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dev/homework/ZP_Server/src/Protobuf/NetworkData.pb.cc -o CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dev/homework/only_test/src/Protobuf/NetworkData.pb.cc -o CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.s
 
 CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o.provides.build: CMakeFi
 
 CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o: CMakeFiles/ProtoUtilLib.dir/flags.make
 CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o: Tool/ProtoUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o -c /home/dev/homework/ZP_Server/src/Tool/ProtoUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dev/homework/only_test/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o -c /home/dev/homework/only_test/src/Tool/ProtoUtil.cpp
 
 CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dev/homework/ZP_Server/src/Tool/ProtoUtil.cpp > CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dev/homework/only_test/src/Tool/ProtoUtil.cpp > CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.i
 
 CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dev/homework/ZP_Server/src/Tool/ProtoUtil.cpp -o CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dev/homework/only_test/src/Tool/ProtoUtil.cpp -o CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.s
 
 CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o.requires:
 
@@ -117,7 +117,7 @@ lib/libProtoUtilLib.a: CMakeFiles/ProtoUtilLib.dir/Protobuf/NetworkData.pb.cc.o
 lib/libProtoUtilLib.a: CMakeFiles/ProtoUtilLib.dir/Tool/ProtoUtil.cpp.o
 lib/libProtoUtilLib.a: CMakeFiles/ProtoUtilLib.dir/build.make
 lib/libProtoUtilLib.a: CMakeFiles/ProtoUtilLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dev/homework/ZP_Server/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library lib/libProtoUtilLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dev/homework/only_test/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library lib/libProtoUtilLib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ProtoUtilLib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProtoUtilLib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -136,6 +136,6 @@ CMakeFiles/ProtoUtilLib.dir/clean:
 .PHONY : CMakeFiles/ProtoUtilLib.dir/clean
 
 CMakeFiles/ProtoUtilLib.dir/depend:
-	cd /home/dev/homework/ZP_Server/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dev/homework/ZP_Server /home/dev/homework/ZP_Server /home/dev/homework/ZP_Server/src /home/dev/homework/ZP_Server/src /home/dev/homework/ZP_Server/src/CMakeFiles/ProtoUtilLib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dev/homework/only_test/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dev/homework/only_test /home/dev/homework/only_test /home/dev/homework/only_test/src /home/dev/homework/only_test/src /home/dev/homework/only_test/src/CMakeFiles/ProtoUtilLib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ProtoUtilLib.dir/depend
 
